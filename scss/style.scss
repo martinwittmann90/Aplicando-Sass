@@ -1,0 +1,216 @@
+@import 'base/colores';
+@import 'base/fuente';
+@import 'base/mixin';
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        #cabecera {
+            display: none;
+        }
+    }
+/*CABECERA*/
+header { 
+    z-index: 1; 
+    padding: 5vh 3vw;
+    position: sticky;
+    top: 0; 
+    border-bottom: $color-siete 5px solid;
+    background-color: $color-dos;  
+    section {
+        ul {
+            margin: 0;
+            padding: 0;    
+        }  
+            li {
+            display: inline;
+            padding: 2vh 5vw;
+            margin-bottom: 2vh;               
+            }
+                a{
+                    font-family: $fuente;
+                    color: $color-fuente-dos;
+                    font-size: 1rem;
+                    text-decoration: none;
+                        &:hover{
+                            color:$color-fuente-cuatro;
+                            transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+                            animation: heartBeat;
+                            animation-duration: 5s; 
+                        }}}}
+.presentacion{
+    background-color: $color-siete;
+    padding: 5vh 2vw;
+        div{ 
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            flex-direction: column; 
+            text-align: center;  
+            h1, h2 {
+                color: $color-fuente-tres;
+            }}}
+
+/*BANNER GIRATORIO*/
+.banner {
+    div{
+        background:$color-tres;
+        height: 150px;
+        div {
+            white-space: nowrap;
+            padding: 25px 0px 25px 0px;
+            font-size: 2rem;
+            font-weight: 500;
+            overflow: hidden;
+            position: relative;
+            div {
+                animation: rolltext 15s linear infinite both;
+                color: $color-fuente-uno;
+                margin: 0;
+                white-space: nowrap;
+                display: inline-flex;
+                overflow: visible;
+                a {
+                    color:$color-fuente-uno;;
+                    font-size: 50px;
+                    font-family: 'Source Sans 3', sans-serif;
+                    @keyframes bounce {
+                        from {
+                            transform: initial;
+                        }
+                        to {
+                            transform: translateY(5px);
+                        }
+                        }
+                    @keyframes rotate {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                            to {
+                            transform: rotate(359deg);
+                        }
+                        }
+                    @keyframes wave {
+                        0% {
+                            transform: translate(3px,3px);
+                        }
+                        20%{
+                            transform: translate(-2px,2px);
+                        }
+                        40%{
+                            transform: translate(-3px,1px);
+                        }
+                        60%{
+                            transform: translate(-2px,-2px);
+                        }
+                        80%{
+                            transform: translate(1px,2px);
+                        }
+                        100% {
+                            transform: translate(3px,3px);
+                        }
+                        }
+                    @keyframes rolltext {
+                        from{
+                            transform: translate3d(0,0,0);
+                        }
+                        to{
+                            transform: translate3d(-50%,0,0);
+                        }
+                        }
+                    @keyframes hideToLeft {
+                        from{
+                            transform: translateX(0%);
+                        }
+                        to{
+                            transform: translateX(-100%);
+                        }}}}}}}
+
+.cuadro-imagenes{
+    @include flexible( flex , row , nowrap , center , center );
+}
+.cuadro-imagenes__container1 {
+    @include flexible( flex , column , nowrap , flex-start , flex-start );
+}
+.cuadro-imagenes__container2 {
+    @include flexible( flex , column , nowrap , flex-start , flex-start );
+}
+
+.arribaizq{
+    background-color: $color-dos ;
+}
+.arribader{
+    background-color:$color-uno ;
+}
+.abajoizq{
+    background-color: $color-cuatro;
+}
+.abajoder{
+    background-color: $color-cinco;
+}
+
+.despedida{
+    background-color: $color-dos;
+    padding: 5vh 2vw;
+        div{ 
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            flex-direction: column; 
+            text-align: center;  
+            h1 {
+                color: $color-fuente-uno;
+            }}}
+.despedida {
+    div {
+        a {          
+            text-decoration:none;
+            font-weight: 600;
+            font-size: 1rem;
+            color:$color-fuente-tres;
+            padding-top:15px;
+            padding-bottom:15px;
+            padding-left:40px;
+            padding-right:40px;
+            background-color:$color-siete;
+            border-color:$color-uno;
+            border-width: 3px;
+            border-style: solid;
+            border-radius:35px;
+            }}}
+/*FOOTER*/
+footer {
+    background-color: $color-siete;
+    padding: 4vh 7vw;
+    @include grid(4, 1, 7em); 
+    text-align: center; 
+    div { 
+        p{
+            color: $color-fuente-tres;
+            font-size: 1rem;
+        } } }
+footer {
+    div {
+        h3{
+            color: $color-fuente-tres;
+            font-size: 2rem;
+        } } }
+footer {
+    div{
+        ul{
+            li{
+                a{
+                    font-family: $fuente;
+                    color: $color-fuente-tres;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }}}}}

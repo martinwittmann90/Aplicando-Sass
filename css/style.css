@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #cabecera {
+    display: none;
+  }
+}
+/*CABECERA*/
+header {
+  z-index: 1;
+  padding: 5vh 3vw;
+  position: sticky;
+  top: 0;
+  border-bottom: #7585E2 5px solid;
+  background-color: #F5F5F5;
+}
+header section ul {
+  margin: 0;
+  padding: 0;
+}
+header section li {
+  display: inline;
+  padding: 2vh 5vw;
+  margin-bottom: 2vh;
+}
+header section a {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  text-decoration: none;
+}
+header section a:hover {
+  color: #DF6828;
+  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+  animation: heartBeat;
+  animation-duration: 5s;
+}
+
+.presentacion {
+  background-color: #7585E2;
+  padding: 5vh 2vw;
+}
+.presentacion div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.presentacion div h1, .presentacion div h2 {
+  color: #FCFAEF;
+}
+
+/*BANNER GIRATORIO*/
+.banner div {
+  background: #D9F672;
+  height: 150px;
+}
+.banner div div {
+  white-space: nowrap;
+  padding: 25px 0px 25px 0px;
+  font-size: 2rem;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+}
+.banner div div div {
+  animation: rolltext 15s linear infinite both;
+  color: #7585E2;
+  margin: 0;
+  white-space: nowrap;
+  display: inline-flex;
+  overflow: visible;
+}
+.banner div div div a {
+  color: #7585E2;
+  font-size: 50px;
+  font-family: "Source Sans 3", sans-serif;
+}
+@keyframes bounce {
+  from {
+    transform: initial;
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: translate(3px, 3px);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-3px, 1px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(3px, 3px);
+  }
+}
+@keyframes rolltext {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes hideToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.cuadro-imagenes {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuadro-imagenes__container1 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cuadro-imagenes__container2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.arribaizq {
+  background-color: #F5F5F5;
+}
+
+.arribader {
+  background-color: #C1CCF7;
+}
+
+.abajoizq {
+  background-color: #F95E48;
+}
+
+.abajoder {
+  background-color: #264C3C;
+}
+
+.despedida {
+  background-color: #F5F5F5;
+  padding: 5vh 2vw;
+}
+.despedida div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.despedida div h1 {
+  color: #7585E2;
+}
+
+.despedida div a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #FCFAEF;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #7585E2;
+  border-color: #C1CCF7;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 35px;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #7585E2;
+  padding: 4vh 7vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 7em;
+  text-align: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+footer div p {
+  color: #FCFAEF;
+  font-size: 1rem;
+}
+
+footer div h3 {
+  color: #FCFAEF;
+  font-size: 2rem;
+}
+
+footer div ul li a {
+  font-family: "Poppins", sans-serif;
+  color: #FCFAEF;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
